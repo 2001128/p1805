@@ -1,0 +1,13 @@
+name = input("请输入你的名字:")
+age = input("请输入你的年龄:")
+weight = float(input("请输入你的重量:"))
+sex = input("请输入你的性别:")
+height = input("请输入你的身高:")
+homeaddress = input("请输入你的家庭地址:")
+print("你的名字:%s"%name)
+print("你的年龄:%s"%sex)
+print("你的重量:%f"%weight)
+print("你的性别:%s"%sex)
+print("你的身高:%s"%height)
+print("你的家庭住址:%s"%homeaddress)
+
