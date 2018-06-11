@@ -7,7 +7,9 @@ elif name =='肉盾':
 elif name == '法师':
     print("王昭君、妲己")
 elif name =='刺客':
-    print("兰陵王、阿珂")
+    print("齐天大圣、兰陵王、阿珂")
+elif name =='战士':
+    print("老夫子、曹操、凯、苏烈、")
 else:
     print("输入不合格")
 
