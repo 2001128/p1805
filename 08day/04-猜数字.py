@@ -9,6 +9,6 @@ while i<10:
     elif number > py:
         print("猜小了")
     elif number == py:
-        print("猜对了")
+        print("大吉大利,今晚吃鸡")
         break
     i+=1
