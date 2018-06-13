@@ -1,4 +1,4 @@
-import random
+import random 
 number = random.randint(1,100)
 i=0
 while i<10:
@@ -12,3 +12,4 @@ while i<10:
         print("大吉大利,今晚吃鸡")
         break
     i+=1
+    
