@@ -1,6 +1,6 @@
-str = "laowang"
+#str = "laowang"
 
-for i in str:
+for i in str("laowang"):
     print(i)
 '''
 for i in range(起始值，终止值，步长):
