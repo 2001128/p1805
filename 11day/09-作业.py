@@ -1,0 +1,18 @@
+city = ['贵州', '上海', '青岛', '烟台', '丽江']  
+print(city,"\n")  
+city.insert(0,'北京')  
+print(city,"\n")  
+del city[0]  
+print(city,"\n")  
+city.pop()  
+print(city,"\n")  
+city.remove('上海')  
+print(city,"\n")  
+city.append('梁山')  
+print(city,"\n")  
+print(sorted(city),"\n")  
+print(city,"\n")  
+city.sort()  
+print(city, "\n")  
+city.reverse()  
+print(city,"\n") 
