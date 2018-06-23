@@ -31,7 +31,7 @@ while True:
             if len(phone) != 11 or phone.startswith("1") == False:
                 print("输入格式有误,请从新输入")
                 break 
-            d["name"] = name 
+            d["name"] = name
             d["number"] = number
             d["phone"] = phone
            
