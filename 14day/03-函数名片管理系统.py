@@ -1,20 +1,54 @@
-list = []
+list = []#存放名字
 def zhuce():
     while True:
-        print("名片管理系统")
-  print('格式不对')
+        print('名片管理系统'.center(50,'*'))
+        print('1.添加名片'.center(50," "))
+        print('2.查找名片'.center(50," "))
+        print('3.修改名片'.center(50," "))
+        print('4.删除名片'.center(50," "))
+        print('5.显示全部名片'.center(50," "))
+        print('6.退出'.center(50," "))
+        n = int(input('请选择功能'))
+        if n == 1:
+            yi()
+        elif n == 2:
+            er()
+        elif n == 3:
+            san()
+        elif n == 4:
+            si()
+        elif n== 5:
+            wu()
+        else:
+            break
+        
+def yi():
+    d = {}
+    while True:
+        name = input('请输入要添加的名字')
+        if len(name) <= 4:
+            break
+        else:
+            print('格式不对')
+            continue
+    while True:
+        job = input('请输入要添加的职位')
+        if len(name) <= 6:
+            break
+        else:
+            print('格式不对')
             continue
     while True:
         phone = input('请输入要添加的手机号')
         if len(phone) != 11 or phone.startswith('1') == False:
             print('格式有误')
             continue
-            d['name']=name
-            d['job']=job
-            d['phone']=phone
-            list.append(d)
-            print('添加成功')
-            break
+        d['name']=name
+        d['job']=job
+        d['phone']=phone
+        list.append(d)
+        print('添加成功')
+        break
 def er():
     flag = False
     f_name = input('请输入要查找的姓名')
