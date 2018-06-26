@@ -68,81 +68,46 @@ def find():
     
     flag = False
     a_name = input('请输入要查找的车主姓名:')
-    b_name = input("请输入你要找的车主手机号:")
     for d in l:
-        if a_name == d['name'] and b_name == d["phone"]:
+        if a_name == d['name']:
             print('姓名%s,车牌号%s,手机号%s,家庭地址%s'%(d['name'],d['number'],d['phone'],d["adress"]))
             flag = True
             break
     if flag == False:
         print('查无此人')
 def revise():
-    b_name = input("请输入你要修改的用户名:")
-    c_phone = input("请输入你要修改用户名的手机号:")
+    name = input("请输入你要修改的用户名:")
     flag = False
     for i in l:
-        if b_name == i["name"] and c_phone == i["phone"]:
+        if name == i["name"]:
             print("1、修改名字")
             print("2、修改车牌号")
             print("3、修改手机号")
             print("4、修改家庭住址")
             name = int(input("请选择功能:"))
             if name == 1:
-                while True:
-                    print("2~4位字符")
-                    i["name"] = input("请输入新用户:")
-                    if len(i["name"]) >=2 and len(i["name"]) <5: #and len(name) >2 == False:
-                        print("修改成功")
-                        break
-                    else:
-                        print('格式不对,请重新输入') 
-                       # continue
+                i["name"] = input("请输入新用户:") 
             elif name == 2:
-                while True:
-                    print("7位字符")
-                    i["number"] = input("请输入新的车牌号:")
-                    if len(i["number"]) == 7:
-                        print("修改成功")
-                        break
-                    else:
-                        print('格式不对,请重新输入')
-                            #continue
+                i["number"] = input("请输入新的车牌号:")
             elif name == 3:
-                while True:
-                    print("11位字符,必须以1开头")
-                    i["phone"] = input("请输入新的手机号:")
-                    if len(i["phone"]) == 11 and i["phone"].startswith('1') == True:
-                        print("修改成功")
-                        break
-                    else:
-                        print('格式有误')
-                           # continue
+                i["phone"] = input("请输入新的手机号")
             elif name == 4:
-                while True:
-                    print("2~7位字符,只输入省份")
-                    i["adress"] = input("请输入你的新地址:")
-                    if len(i["adress"]) >2 and len(i["adress"])<=7:
-                        break
-                    else:
-                        print("格式不对")
-                            #continue
-                    print(i["name"])
+                i["adress"] = input("请输入你的新地址")
+                print(i["name"])
             flag = True
             break
-    if flag == False:
-        print("没有此用户")
+        if flag == False:
+            print("没有此用户")
 def remove():
-    name = input('请输入要删除的车主名字:')
-    phone = input("请输入你要删除的车主电话:")
+    s_name = input('请输入要删除的车主名字:')
     flag = False
-    for position,i in enumerate(l):
-        if name == i['name'] and phone == i["phone"] :
-        
+    for position,i in enumerate(list):
+        if name == i['name']:
             print('1:确认删除')
             print('2:取消删除')
             n = int(input('请选择'))
             if n == 1:
-                l.pop(position)
+                list.pop(position)
             break
         if flag == False:
             print('查无此人')
