@@ -20,5 +20,12 @@ def cul_num(num):
 result = cul_num(10)
 print(result)
 '''
+def a_num(num):
+    if num ==1:
+        return 1
+    else:
+        return num*a_num(num-1)
+result = a_num(5)
+print(result)
 
 

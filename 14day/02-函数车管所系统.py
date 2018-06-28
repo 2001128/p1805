@@ -6,7 +6,7 @@ def sy():
         print('2.查找车主'.center(50," "))
         print('3.修改车主'.center(50," "))
         print('4.删除车主'.center(50," "))
-        print('5.打印车主'.center(50," "))
+        print('5.显示车主'.center(50," "))
         print('6.退出系统'.center(50," "))
         n = int(input('请选择功能'))
         if n == 1:
@@ -22,7 +22,7 @@ def sy():
         else:
             break
         
-def append():
+def append():#添加车主
     d = {}
     while True:
         print("2~4位字符")
@@ -64,7 +64,7 @@ def append():
         l.append(d)
         print('添加成功')
         break
-def find():
+def find():#查找车主
     
     flag = False
     a_name = input('请输入要查找的车主姓名:')
@@ -76,7 +76,7 @@ def find():
             break
     if flag == False:
         print('查无此人')
-def revise():
+def revise():#修改车主
     b_name = input("请输入你要修改的用户名:")
     c_phone = input("请输入你要修改用户名的手机号:")
     flag = False
@@ -131,7 +131,7 @@ def revise():
             break
     if flag == False:
         print("没有此用户")
-def remove():
+def remove():#删除车主
     name = input('请输入要删除的车主名字:')
     phone = input("请输入你要删除的车主电话:")
     flag = False
@@ -143,10 +143,11 @@ def remove():
             n = int(input('请选择'))
             if n == 1:
                 l.pop(position)
+                print("删除成功")
             break
-        if flag == False:
-            print('查无此人')
-def print_a():
+    if flag == False:
+        print('查无此人')
+def print_a():#显示车主
     print('名字\t 车牌号\t\t电话\t\t家庭住址\t')
     for i in l:
         print(i['name']+"\t"+i["number"]+"\t"+i["phone"]+"\t"+i["adress"])
